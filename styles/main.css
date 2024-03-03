@@ -908,7 +908,7 @@ article {
 .subscribers_agreement_container input[type='checkbox']:checked + label::before {
     position: relative;
     content: '\2713';
-    align-items: center;
+    font-size: 20px;
     text-align: center;
     background-color: var(--subscribeAgreementBGColorChecked);
     border-color: var(--subscribeAgreementBorderColorChecked);
@@ -1078,15 +1078,23 @@ footer {
 
 /* ADAPTATION */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 419px) {
     .subscribe_container {
         height: 425px;
     }
+
+    .subscribe_container_content h2 {
+        margin-right: 0px;
+    }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1020px) {
+@media screen and (min-width: 419px) and (max-width: 820px) {
     .subscribe_container {
         height: 385px;
+    }
+
+    .subscribe_container_content h2 {
+        margin-right: 0px;
     }
 }
 
@@ -1192,6 +1200,44 @@ footer {
     .description_container {
         padding-bottom: 50px;
     }
+
+    .subscribe_container {
+        background: radial-gradient(ellipse at 45% -15%, #1648a8 50%, #2756b0 50%);
+        background-position: center;
+        background-size: 220% 200%;
+        background-repeat: no-repeat;
+    }
+
+    .subscribe_container_content,
+    #subscribe_form {
+        flex-direction: column;
+    }
+
+    .subscribe_container_content {
+        padding-top: 43px;
+    }
+
+    .subscribe_container_content h2,
+    .subscribers_email_container {
+        margin-bottom: 25px;
+    }
+
+    .subscribe_container_content h2,
+    #subscribe_form {
+        align-self: start;
+    }
+
+    .subscribers_agreement_container label {
+        max-width: 323px;
+    }
+
+    #invalid_email_msg {
+        bottom: 50px;
+    }
+
+    .footer_container div:nth-child(5) div:nth-child(1) p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 820px) and (max-width: 1020px) {
@@ -1219,49 +1265,13 @@ footer {
         top: 340px;
         left: -341px;
     }
-}
-
-@media screen and (max-width: 1020px) {
-    .subscribe_container {
-        background: radial-gradient(ellipse at 45% -15%, #1648a8 50%, #2756b0 50%);
-        background-position: center;
-        background-size: 220% 200%;
-        background-repeat: no-repeat;
-    }
-
-    .subscribe_container_content {
-        padding-top: 43px;
-    }
-
-    .subscribe_container_content,
-    #subscribe_form {
-        flex-direction: column;
-    }
-
-    .subscribe_container_content h2,
-    .subscribers_email_container {
-        margin-bottom: 25px;
-    }
-
-    .subscribe_container_content h2,
-    #subscribe_form {
-        align-self: start;
-    }
 
     .subscribe_container_content h2,
     #subscribe_form > div {
         margin-right: 40px;
     }
 
-    .subscribers_agreement_container label {
-        width: 284px;
-    }
-
-    #invalid_email_msg {
-        bottom: 50px;
-    }
-
-    .footer_container div:nth-child(5) div:nth-child(1) p {
+    .phone p {
         font-size: 12px;
     }
 }
